@@ -1,4 +1,5 @@
-import os
+git remote set-url origin git@github.com:krishnarawatsf/phishing-url-detection.git
+git push -u origin mainimport os
 import sqlite3
 import json
 from typing import List, Dict, Any
