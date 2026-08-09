@@ -1,0 +1,17 @@
+feature,point_biserial_corr,p_value,single_feature_best_accuracy,ranges_non_overlapping,unique_values
+url_length,0.5459,2.6146790734989347e-135,0.7395,False,62
+hostname_length,0.4771,2.4664187471665506e-99,0.7781,False,42
+path_length,0.2875,2.317071689825877e-34,0.6352,False,18
+count_dots,0.4336,1.909968629276104e-80,0.8415,False,5
+count_hyphens,0.6165,3.439657189430524e-182,0.8571,False,4
+count_at,0.3621,6.644232032570684e-55,0.6144,False,2
+count_question,0.2108,6.950474243288695e-19,0.5746,False,2
+count_equals,0.2108,6.950474243288695e-19,0.5746,False,2
+count_slash,-0.3133,8.118295050464015e-41,0.6634,False,5
+count_percent,0.0,1.0,0.4974,False,1
+count_digits,0.5106,8.144513010678215e-116,0.7493,False,10
+count_letters,0.4403,3.600366800810896e-83,0.7239,False,54
+has_ip,0.3509,1.909243492823776e-51,0.6081,False,2
+is_https,-0.4392,9.557886917116508e-83,0.2974,False,2
+num_subdomains,-0.0756,0.001629004571088497,0.8023,False,3
+has_suspicious_keyword,0.6615,7.145055756057868e-219,0.8179,False,2

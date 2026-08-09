@@ -1,0 +1,13 @@
+description,input_preview,status,prediction,phishing_probability,error
+Very long URL,http://example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,ok,Legitimate,0.25,
+Many subdomains,https://a.b.c.d.e.f.example.com/path,ok,Legitimate,0.39,
+IP address URL,http://192.168.1.1/login,ok,Phishing,1.0,
+URL with @,http://legitimate.com@evil.tk/login,ok,Legitimate,0.15,
+Unusual characters/encoding,http://example.com/path?q=%E2%82%AC,ok,Legitimate,0.03,
+HTTP URL,http://example.com/insecure,ok,Legitimate,0.02,
+HTTPS URL,https://example.com/secure,ok,Legitimate,0.02,
+URL shortening pattern,http://bit.ly/abc123,ok,Legitimate,0.02,
+Punycode-like domain,http://xn--bcher-kva.example,ok,Legitimate,0.11,
+Malformed URL,not_a_valid_url,ok,Legitimate,0.0,
+Empty URL,(empty),handled_empty,,,
+XSS payload,<script>alert(1)</script>,ok,Legitimate,0.01,

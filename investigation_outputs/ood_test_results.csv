@@ -1,0 +1,22 @@
+description,url,true_label,predicted,phishing_probability,correct
+Modern legitimate - Google,https://www.google.com/search?q=machine+learning,0,0,0.0,True
+Modern legitimate - GitHub,https://github.com/scikit-learn/scikit-learn,0,0,0.09,True
+Legitimate bank site,https://www.chase.com/personal/checking,0,0,0.0,True
+Modern legitimate - OpenAI,https://openai.com/research,0,0,0.0,True
+Modern legitimate - Cursor,https://cursor.com/pricing,0,0,0.0,True
+Suspicious-looking legitimate login,https://accounts.google.com/signin/v2/identifier,0,0,0.0,True
+Legitimate OAuth login URL,https://login.microsoftonline.com/common/oauth2/v2.0/authorize,0,0,0.3,True
+Legitimate secure banking path,https://secure.chase.com/web/auth/dashboard,0,0,0.0,True
+Homoglyph phishing pattern,https://paypa1-secure-login.com/verify,1,1,0.62,True
+Simple phishing on suspicious TLD,https://amazon-customer-support.xyz/account/update,1,1,0.69,True
+IP-based phishing (TEST-NET),http://192.0.2.45/secure/banking,1,1,0.94,True
+Subdomain deception pattern,http://www.google.com.evil-site.ru/login,1,1,0.7,True
+URL shortener - ambiguous,https://bit.ly/3xample,0,0,0.0,True
+Multi-subdomain legitimate TLD,https://sub1.sub2.sub3.sub4.sub5.example.com/path,0,0,0.4,True
+URL with credentials segment,http://user:pass@example.com/secret,0,0,0.03,True
+@-symbol phishing,http://legitimate.com@phishing.tk/steal,1,0,0.14,False
+Punycode domain,https://xn--80ak6aa92e.com,0,0,0.17,True
+Very long URL,http://example.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,0,0,0.25,True
+Short legitimate URL,http://test.co.uk/login,0,0,0.05,True
+Simple phishing template,https://microsoft-account-update.tk/signin,1,1,1.0,True
+Simple legitimate Apple URL,https://www.apple.com/shop/buy-iphone,0,0,0.0,True

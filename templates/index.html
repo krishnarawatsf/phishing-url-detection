@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing URL Detector & Risk Analysis System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="brand-block">
+                <div class="brand-title-wrap">
+                    <p class="eyebrow">Threat Intelligence</p>
+                    <h1>Phishing Defense Console</h1>
+                </div>
+            </div>
+            <div class="stats-badge" id="statsBadge">
+                <span class="dots"></span>
+                <span>Total Scans: <strong id="totalScansCount">0</strong></span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="card scan-card">
+                <div class="section-heading-row">
+                    <div>
+                        <p class="section-kicker">URL Analysis</p>
+                        <h2>Analyze website risk</h2>
+                    </div>
+                    <div class="chip">Live check</div>
+                </div>
+                <p class="description">Enter any link to assess suspicious patterns, score the threat level, and inspect the security indicators behind the result.</p>
+
+                <form id="scanForm" class="scan-form">
+                    <div class="input-group">
+                        <input type="text" id="urlInput" placeholder="https://www.example.com or http://192.168.1.1/login" required autocomplete="off">
+                        <button type="submit" id="scanBtn" class="btn primary-btn">
+                            <span class="btn-text">Scan URL</span>
+                            <span class="spinner hidden" id="btnSpinner"></span>
+                        </button>
+                    </div>
+                    <div id="errorMessage" class="error-alert hidden"></div>
+                </form>
+            </section>
+
+            <section id="resultsSection" class="card result-card hidden">
+                <div class="result-header">
+                    <div>
+                        <p class="section-kicker">Assessment result</p>
+                        <h3>Security report</h3>
+                    </div>
+                    <span id="riskBadge" class="badge">SAFE</span>
+                </div>
+
+                <div class="result-grid">
+                    <div class="metric-box">
+                        <span class="metric-label">Analyzed target</span>
+                        <div class="metric-value url-value" id="analyzedUrl">-</div>
+                    </div>
+                    <div class="metric-box">
+                        <span class="metric-label">Classification</span>
+                        <div class="metric-value" id="predictionText">-</div>
+                    </div>
+                    <div class="metric-box">
+                        <span class="metric-label">Risk score</span>
+                        <div class="metric-value score-value" id="riskScoreVal">0 / 100</div>
+                    </div>
+                    <div class="metric-box">
+                        <span class="metric-label">Phishing probability</span>
+                        <div class="metric-value" id="phishingProbVal">0%</div>
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-label">Threat severity level</div>
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <div class="explanations-container">
+                    <h4>Indicators & explanations</h4>
+                    <ul id="explanationsList" class="explanations-list"></ul>
+                </div>
+            </section>
+
+            <section class="card history-card">
+                <div class="section-heading-row history-heading">
+                    <div>
+                        <p class="section-kicker">Activity</p>
+                        <h3>Recent scan history</h3>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>URL</th>
+                                <th>Prediction</th>
+                                <th>Risk Score</th>
+                                <th>Risk Level</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyTableBody">
+                            <tr>
+                                <td colspan="5" class="empty-msg">No recent scan records found.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>B.Tech Major Project | Machine Learning Based Phishing URL Detection System</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

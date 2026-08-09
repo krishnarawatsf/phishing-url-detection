@@ -1,0 +1,977 @@
+{
+  "duplicate_analysis": {
+    "total_duplicate_urls_raw": 265,
+    "total_duplicate_urls_clean": 0,
+    "duplicate_feature_rows": 1219,
+    "duplicate_domains": 1067,
+    "conflicting_labels_same_url": 0,
+    "near_duplicate_url_groups": 104,
+    "near_duplicate_extra_rows": 106,
+    "unique_registered_domains": 668,
+    "domains_with_multiple_urls": 84,
+    "max_urls_per_domain": 36
+  },
+  "train_test_similarity": {
+    "train_unique_domains": 548,
+    "test_unique_domains": 173,
+    "shared_domains_count": 53,
+    "pct_test_samples_sharing_domain_with_train": 64.55,
+    "test_samples_sharing_domain_with_train": 224,
+    "exact_url_overlap_train_test": 0,
+    "near_identical_canonical_overlap": 34,
+    "shared_domain_examples": [
+      {
+        "domain": "paypal-security-update.top",
+        "train_urls": [
+          "https://paypal-security-update.top/signin"
+        ],
+        "test_urls": [
+          "http://paypal-security-update.top/signin"
+        ]
+      },
+      {
+        "domain": "linkedin.com",
+        "train_urls": [
+          "https://support.linkedin.com/docs/guide",
+          "https://linkedin.com/api/v1/data"
+        ],
+        "test_urls": [
+          "https://blog.linkedin.com/",
+          "https://api.linkedin.com/api/v1/data"
+        ]
+      },
+      {
+        "domain": "youtube.com",
+        "train_urls": [
+          "https://blog.youtube.com/blog/2026/08/article",
+          "https://support.youtube.com/blog/2026/08/article"
+        ],
+        "test_urls": [
+          "https://docs.youtube.com/api/v1/data",
+          "https://youtube.com/terms-of-service"
+        ]
+      },
+      {
+        "domain": "chase-security-update.top",
+        "train_urls": [
+          "https://chase-security-update.top/signin"
+        ],
+        "test_urls": [
+          "http://chase-security-update.top/signin"
+        ]
+      },
+      {
+        "domain": "account-security-alert-check.xyz",
+        "train_urls": [
+          "https://www.paypal.confirm-identity.account-security-alert-check.xyz/index.html?ref=login",
+          "https://www.amazon.free-giftcard.account-security-alert-check.xyz/index.html?ref=login"
+        ],
+        "test_urls": [
+          "https://www.netflix.verify-account.account-security-alert-check.xyz/index.html?ref=login",
+          "http://www.paypal.bank-security.account-security-alert-check.xyz/index.html?ref=login"
+        ]
+      }
+    ]
+  },
+  "feature_audit": {
+    "feature_statistics": [
+      {
+        "feature": "url_length",
+        "dtype": "int64",
+        "min": 16.0,
+        "max": 104.0,
+        "mean": 48.75907780979827,
+        "std": 23.591349151101166,
+        "mean_legitimate": 35.81460023174971,
+        "mean_phishing": 61.569954128440365,
+        "min_legitimate": 16.0,
+        "max_legitimate": 57.0,
+        "min_phishing": 23.0,
+        "max_phishing": 104.0
+      },
+      {
+        "feature": "hostname_length",
+        "dtype": "int64",
+        "min": 7.0,
+        "max": 70.0,
+        "mean": 22.091066282420748,
+        "std": 14.524065521282257,
+        "mean_legitimate": 15.125144843568945,
+        "mean_phishing": 28.985091743119266,
+        "min_legitimate": 7.0,
+        "max_legitimate": 25.0,
+        "min_phishing": 10.0,
+        "max_phishing": 70.0
+      },
+      {
+        "feature": "path_length",
+        "dtype": "int64",
+        "min": 0.0,
+        "max": 79.0,
+        "mean": 17.14985590778098,
+        "std": 19.699164502886976,
+        "mean_legitimate": 11.457705677867903,
+        "mean_phishing": 22.783256880733944,
+        "min_legitimate": 0.0,
+        "max_legitimate": 21.0,
+        "min_phishing": 5.0,
+        "max_phishing": 79.0
+      },
+      {
+        "feature": "count_dots",
+        "dtype": "int64",
+        "min": 1.0,
+        "max": 5.0,
+        "mean": 2.3636887608069164,
+        "std": 1.209356508800446,
+        "mean_legitimate": 1.8366164542294323,
+        "mean_phishing": 2.885321100917431,
+        "min_legitimate": 1.0,
+        "max_legitimate": 2.0,
+        "min_phishing": 1.0,
+        "max_phishing": 5.0
+      },
+      {
+        "feature": "count_hyphens",
+        "dtype": "int64",
+        "min": 0.0,
+        "max": 4.0,
+        "mean": 0.9642651296829972,
+        "std": 1.346525989702926,
+        "mean_legitimate": 0.12977983777520277,
+        "mean_phishing": 1.790137614678899,
+        "min_legitimate": 0.0,
+        "max_legitimate": 2.0,
+        "min_phishing": 0.0,
+        "max_phishing": 4.0
+      },
+      {
+        "feature": "count_at",
+        "dtype": "int64",
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1170028818443804,
+        "std": 0.32142371954242943,
+        "mean_legitimate": 0.0,
+        "mean_phishing": 0.23279816513761467,
+        "min_legitimate": 0.0,
+        "max_legitimate": 0.0,
+        "min_phishing": 0.0,
+        "max_phishing": 1.0
+      },
+      {
+        "feature": "count_question",
+        "dtype": "int64",
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.15561959654178675,
+        "std": 0.3624943278369445,
+        "mean_legitimate": 0.07879490150637311,
+        "mean_phishing": 0.231651376146789,
+        "min_legitimate": 0.0,
+        "max_legitimate": 1.0,
+        "min_phishing": 0.0,
+        "max_phishing": 1.0
+      },
+      {
+        "feature": "count_equals",
+        "dtype": "int64",
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.15561959654178675,
+        "std": 0.3624943278369445,
+        "mean_legitimate": 0.07879490150637311,
+        "mean_phishing": 0.231651376146789,
+        "min_legitimate": 0.0,
+        "max_legitimate": 1.0,
+        "min_phishing": 0.0,
+        "max_phishing": 1.0
+      },
+      {
+        "feature": "count_slash",
+        "dtype": "int64",
+        "min": 2.0,
+        "max": 6.0,
+        "mean": 3.4985590778097984,
+        "std": 0.8012045678090659,
+        "mean_legitimate": 3.750869061413673,
+        "mean_phishing": 3.248853211009174,
+        "min_legitimate": 2.0,
+        "max_legitimate": 6.0,
+        "min_phishing": 3.0,
+        "max_phishing": 4.0
+      },
+      {
+        "feature": "count_percent",
+        "dtype": "int64",
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "mean_legitimate": 0.0,
+        "mean_phishing": 0.0,
+        "min_legitimate": 0.0,
+        "max_legitimate": 0.0,
+        "min_phishing": 0.0,
+        "max_phishing": 0.0
+      },
+      {
+        "feature": "count_digits",
+        "dtype": "int64",
+        "min": 0.0,
+        "max": 12.0,
+        "mean": 2.8697406340057636,
+        "std": 3.889138157736584,
+        "mean_legitimate": 0.8736964078794901,
+        "mean_phishing": 4.845183486238532,
+        "min_legitimate": 0.0,
+        "max_legitimate": 6.0,
+        "min_phishing": 0.0,
+        "max_phishing": 12.0
+      },
+      {
+        "feature": "count_letters",
+        "dtype": "int64",
+        "min": 8.0,
+        "max": 83.0,
+        "mean": 36.75619596541787,
+        "std": 19.81452718453337,
+        "mean_legitimate": 27.987253765932792,
+        "mean_phishing": 45.434633027522935,
+        "min_legitimate": 12.0,
+        "max_legitimate": 48.0,
+        "min_phishing": 8.0,
+        "max_phishing": 83.0
+      },
+      {
+        "feature": "has_ip",
+        "dtype": "int64",
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1106628242074928,
+        "std": 0.31371414304413237,
+        "mean_legitimate": 0.0,
+        "mean_phishing": 0.22018348623853212,
+        "min_legitimate": 0.0,
+        "max_legitimate": 0.0,
+        "min_phishing": 0.0,
+        "max_phishing": 1.0
+      },
+      {
+        "feature": "is_https",
+        "dtype": "int64",
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.6876080691642651,
+        "std": 0.463468674652836,
+        "mean_legitimate": 0.8922363847045192,
+        "mean_phishing": 0.48509174311926606,
+        "min_legitimate": 0.0,
+        "max_legitimate": 1.0,
+        "min_phishing": 0.0,
+        "max_phishing": 1.0
+      },
+      {
+        "feature": "num_subdomains",
+        "dtype": "int64",
+        "min": 0.0,
+        "max": 3.0,
+        "mean": 0.7654178674351585,
+        "std": 0.9370765355380375,
+        "mean_legitimate": 0.8366164542294322,
+        "mean_phishing": 0.694954128440367,
+        "min_legitimate": 0.0,
+        "max_legitimate": 1.0,
+        "min_phishing": 0.0,
+        "max_phishing": 3.0
+      },
+      {
+        "feature": "has_suspicious_keyword",
+        "dtype": "int64",
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.6420749279538905,
+        "std": 0.47938994028545995,
+        "mean_legitimate": 0.32329084588644263,
+        "mean_phishing": 0.9575688073394495,
+        "min_legitimate": 0.0,
+        "max_legitimate": 1.0,
+        "min_phishing": 0.0,
+        "max_phishing": 1.0
+      }
+    ],
+    "feature_correlations": [
+      {
+        "feature": "url_length",
+        "point_biserial_corr": 0.5459,
+        "p_value": 2.6146790734989347e-135,
+        "single_feature_best_accuracy": 0.7395,
+        "ranges_non_overlapping": false,
+        "unique_values": 62
+      },
+      {
+        "feature": "hostname_length",
+        "point_biserial_corr": 0.4771,
+        "p_value": 2.4664187471665506e-99,
+        "single_feature_best_accuracy": 0.7781,
+        "ranges_non_overlapping": false,
+        "unique_values": 42
+      },
+      {
+        "feature": "path_length",
+        "point_biserial_corr": 0.2875,
+        "p_value": 2.317071689825877e-34,
+        "single_feature_best_accuracy": 0.6352,
+        "ranges_non_overlapping": false,
+        "unique_values": 18
+      },
+      {
+        "feature": "count_dots",
+        "point_biserial_corr": 0.4336,
+        "p_value": 1.909968629276104e-80,
+        "single_feature_best_accuracy": 0.8415,
+        "ranges_non_overlapping": false,
+        "unique_values": 5
+      },
+      {
+        "feature": "count_hyphens",
+        "point_biserial_corr": 0.6165,
+        "p_value": 3.439657189430524e-182,
+        "single_feature_best_accuracy": 0.8571,
+        "ranges_non_overlapping": false,
+        "unique_values": 4
+      },
+      {
+        "feature": "count_at",
+        "point_biserial_corr": 0.3621,
+        "p_value": 6.644232032570684e-55,
+        "single_feature_best_accuracy": 0.6144,
+        "ranges_non_overlapping": false,
+        "unique_values": 2
+      },
+      {
+        "feature": "count_question",
+        "point_biserial_corr": 0.2108,
+        "p_value": 6.950474243288695e-19,
+        "single_feature_best_accuracy": 0.5746,
+        "ranges_non_overlapping": false,
+        "unique_values": 2
+      },
+      {
+        "feature": "count_equals",
+        "point_biserial_corr": 0.2108,
+        "p_value": 6.950474243288695e-19,
+        "single_feature_best_accuracy": 0.5746,
+        "ranges_non_overlapping": false,
+        "unique_values": 2
+      },
+      {
+        "feature": "count_slash",
+        "point_biserial_corr": -0.3133,
+        "p_value": 8.118295050464015e-41,
+        "single_feature_best_accuracy": 0.6634,
+        "ranges_non_overlapping": false,
+        "unique_values": 5
+      },
+      {
+        "feature": "count_percent",
+        "point_biserial_corr": 0.0,
+        "p_value": 1.0,
+        "single_feature_best_accuracy": 0.4974,
+        "ranges_non_overlapping": false,
+        "unique_values": 1
+      },
+      {
+        "feature": "count_digits",
+        "point_biserial_corr": 0.5106,
+        "p_value": 8.144513010678215e-116,
+        "single_feature_best_accuracy": 0.7493,
+        "ranges_non_overlapping": false,
+        "unique_values": 10
+      },
+      {
+        "feature": "count_letters",
+        "point_biserial_corr": 0.4403,
+        "p_value": 3.600366800810896e-83,
+        "single_feature_best_accuracy": 0.7239,
+        "ranges_non_overlapping": false,
+        "unique_values": 54
+      },
+      {
+        "feature": "has_ip",
+        "point_biserial_corr": 0.3509,
+        "p_value": 1.909243492823776e-51,
+        "single_feature_best_accuracy": 0.6081,
+        "ranges_non_overlapping": false,
+        "unique_values": 2
+      },
+      {
+        "feature": "is_https",
+        "point_biserial_corr": -0.4392,
+        "p_value": 9.557886917116508e-83,
+        "single_feature_best_accuracy": 0.2974,
+        "ranges_non_overlapping": false,
+        "unique_values": 2
+      },
+      {
+        "feature": "num_subdomains",
+        "point_biserial_corr": -0.0756,
+        "p_value": 0.001629004571088497,
+        "single_feature_best_accuracy": 0.8023,
+        "ranges_non_overlapping": false,
+        "unique_values": 3
+      },
+      {
+        "feature": "has_suspicious_keyword",
+        "point_biserial_corr": 0.6615,
+        "p_value": 7.145055756057868e-219,
+        "single_feature_best_accuracy": 0.8179,
+        "ranges_non_overlapping": false,
+        "unique_values": 2
+      }
+    ],
+    "perfect_range_separators": [],
+    "top_correlated_features": [
+      {
+        "feature": "has_suspicious_keyword",
+        "point_biserial_corr": 0.6615,
+        "single_feature_best_accuracy": 0.8179
+      },
+      {
+        "feature": "count_hyphens",
+        "point_biserial_corr": 0.6165,
+        "single_feature_best_accuracy": 0.8571
+      },
+      {
+        "feature": "url_length",
+        "point_biserial_corr": 0.5459,
+        "single_feature_best_accuracy": 0.7395
+      },
+      {
+        "feature": "count_digits",
+        "point_biserial_corr": 0.5106,
+        "single_feature_best_accuracy": 0.7493
+      },
+      {
+        "feature": "hostname_length",
+        "point_biserial_corr": 0.4771,
+        "single_feature_best_accuracy": 0.7781
+      }
+    ]
+  },
+  "dataset_source": {
+    "classification": "SYNTHETIC / RULE-GENERATED",
+    "source_script": "scripts/generate_dataset.py",
+    "random_seed": 42,
+    "legitimate_generation": "Random combinations of 30 known domains \u00d7 14 paths \u00d7 6 subdomain prefixes",
+    "phishing_generation": "5 template patterns: IP URLs, @-symbol tricks, deep subdomains, long keyword paths, brand-spoof TLDs",
+    "external_feeds_used": false,
+    "label_creation_method": "Rule-based at generation time \u2014 phishing templates always label=1, legitimate templates always label=0",
+    "label_feature_overlap": "CRITICAL FINDING: Labels created using same URL characteristics (suspicious TLDs, @ symbol, IP, keywords) that features detect",
+    "major_limitation": true
+  },
+  "feature_engineering_audit": {
+    "checks": [
+      {
+        "check": "Uses target label",
+        "result": false,
+        "evidence": "extract_features() only parses URL string"
+      },
+      {
+        "check": "Uses dataset source",
+        "result": false,
+        "evidence": "No metadata columns accessed"
+      },
+      {
+        "check": "Uses row position/index",
+        "result": false,
+        "evidence": "No index-based features"
+      },
+      {
+        "check": "Uses filename",
+        "result": false,
+        "evidence": "Not referenced"
+      },
+      {
+        "check": "Uses class name",
+        "result": false,
+        "evidence": "Not referenced"
+      },
+      {
+        "check": "Uses pre-existing classification",
+        "result": false,
+        "evidence": "Not referenced"
+      },
+      {
+        "check": "Indirect label encoding via generation rules",
+        "result": true,
+        "evidence": "Phishing URLs always contain suspicious TLDs/IPs/@/keywords that features explicitly measure \u2014 circular but not code-level leakage"
+      }
+    ],
+    "code_level_data_leakage": false,
+    "data_leakage_verdict": "NO",
+    "conceptual_circular_labeling": true
+  },
+  "preprocessing_audit": {
+    "operations_before_split": [
+      {
+        "operation": "dropna(url, label)",
+        "uses_full_dataset": true,
+        "leakage_risk": "LOW \u2014 removes incomplete rows only"
+      },
+      {
+        "operation": "normalize_url()",
+        "uses_full_dataset": true,
+        "leakage_risk": "LOW \u2014 per-row transform"
+      },
+      {
+        "operation": "drop_duplicates(url)",
+        "uses_full_dataset": true,
+        "leakage_risk": "LOW \u2014 dedup before split is acceptable"
+      }
+    ],
+    "operations_after_split": [
+      {
+        "operation": "extract_features_df()",
+        "uses_full_dataset": false,
+        "leakage_risk": "NONE"
+      },
+      {
+        "operation": "StandardScaler.fit_transform(train)",
+        "uses_full_dataset": false,
+        "leakage_risk": "NONE"
+      },
+      {
+        "operation": "StandardScaler.transform(test)",
+        "uses_full_dataset": false,
+        "leakage_risk": "NONE"
+      }
+    ],
+    "feature_selection_before_split": false,
+    "scaling_before_split": false,
+    "preprocessing_leakage": false
+  },
+  "model_config": {
+    "n_estimators": 100,
+    "max_depth": null,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt",
+    "class_weight": null,
+    "random_state": 42,
+    "bootstrap": true,
+    "overfitting_indicators": [
+      "max_depth=None allows full tree depth \u2014 can memorize training data",
+      "However, 100% test accuracy with 100% CV suggests dataset separability, not just overfitting",
+      "Train accuracy also 100% \u2014 model fully fits training set"
+    ]
+  },
+  "original_random_split": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "fp": 0,
+    "fn": 0,
+    "tp": 174,
+    "tn": 173,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0
+  },
+  "leave_domain_out": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "fp": 0,
+    "fn": 0,
+    "tp": 175,
+    "tn": 182,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "train_size": 1378,
+    "test_size": 357,
+    "train_domains": 535,
+    "test_domains": 133
+  },
+  "grouped_cv": {
+    "mean_accuracy": 1.0,
+    "std_accuracy": 0.0,
+    "mean_precision": 1.0,
+    "std_precision": 0.0,
+    "mean_recall": 1.0,
+    "std_recall": 0.0,
+    "mean_f1": 1.0,
+    "std_f1": 0.0,
+    "fold_details": [
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fp": 0,
+        "fn": 0,
+        "tp": 152,
+        "tn": 195,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "fold": 1
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fp": 0,
+        "fn": 0,
+        "tp": 173,
+        "tn": 174,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "fold": 2
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fp": 0,
+        "fn": 0,
+        "tp": 198,
+        "tn": 149,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "fold": 3
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fp": 0,
+        "fn": 0,
+        "tp": 175,
+        "tn": 172,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "fold": 4
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fp": 0,
+        "fn": 0,
+        "tp": 174,
+        "tn": 173,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "fold": 5
+      }
+    ]
+  },
+  "feature_ablation": {
+    "remove_top_0": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp": 0,
+      "fn": 0,
+      "tp": 174,
+      "tn": 173,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "removed_features": [],
+      "remaining_features": 16
+    },
+    "remove_top_1": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp": 0,
+      "fn": 0,
+      "tp": 174,
+      "tn": 173,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "removed_features": [
+        "count_dots"
+      ],
+      "remaining_features": 15
+    },
+    "remove_top_2": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp": 0,
+      "fn": 0,
+      "tp": 174,
+      "tn": 173,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "removed_features": [
+        "count_dots",
+        "count_hyphens"
+      ],
+      "remaining_features": 14
+    },
+    "remove_top_3": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp": 0,
+      "fn": 0,
+      "tp": 174,
+      "tn": 173,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "removed_features": [
+        "count_dots",
+        "count_hyphens",
+        "num_subdomains"
+      ],
+      "remaining_features": 13
+    },
+    "remove_top_5": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp": 0,
+      "fn": 0,
+      "tp": 174,
+      "tn": 173,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "removed_features": [
+        "count_dots",
+        "count_hyphens",
+        "num_subdomains",
+        "hostname_length",
+        "has_suspicious_keyword"
+      ],
+      "remaining_features": 11
+    }
+  },
+  "baselines": {
+    "majority_class": 1,
+    "majority_class_baseline": {
+      "accuracy": 0.5014409221902018,
+      "precision": 0.5014409221902018,
+      "recall": 1.0,
+      "f1": 0.6679462571976967,
+      "fp": 173,
+      "fn": 0,
+      "tp": 174,
+      "tn": 0
+    },
+    "rule_based_heuristic_test": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fp": 0,
+      "fn": 0,
+      "tp": 174,
+      "tn": 173
+    },
+    "rule_based_heuristic_full_dataset_accuracy": 1.0
+  },
+  "ood_test": {
+    "metrics": {
+      "accuracy": 0.9523809523809523,
+      "precision": 1.0,
+      "recall": 0.8333333333333334,
+      "f1": 0.9090909090909091,
+      "fp": 0,
+      "fn": 1,
+      "tp": 5,
+      "tn": 15,
+      "samples": 21,
+      "correct_count": 20
+    },
+    "details": [
+      {
+        "description": "Modern legitimate - Google",
+        "url": "https://www.google.com/search?q=machine+learning",
+        "true_label": 0,
+        "predicted": 0,
+        "phishing_probability": 0.0,
+        "correct": true
+      },
+      {
+        "description": "Modern legitimate - GitHub",
+        "url": "https://github.com/scikit-learn/scikit-learn",
+        "true_label": 0,
+        "predicted": 0,
+        "phishing_probability": 0.09,
+        "correct": true
+      },
+      {
+        "description": "Legitimate bank site",
+        "url": "https://www.chase.com/personal/checking",
+        "true_label": 0,
+        "predicted": 0,
+        "phishing_probability": 0.0,
+        "correct": true
+      },
+      {
+        "description": "Modern legitimate - OpenAI",
+        "url": "https://openai.com/research",
+        "true_label": 0,
+        "predicted": 0,
+        "phishing_probability": 0.0,
+        "correct": true
+      },
+      {
+        "description": "Modern legitimate - Cursor",
+        "url": "https://cursor.com/pricing",
+        "true_label": 0,
+        "predicted": 0,
+        "phishing_probability": 0.0,
+        "correct": true
+      },
+      {
+        "description": "Suspicious-looking legitimate login",
+        "url": "https://accounts.google.com/signin/v2/identifier",
+        "true_label": 0,
+        "predicted": 0,
+        "phishing_probability": 0.0,
+        "correct": true
+      },
+      {
+        "description": "Legitimate OAuth login URL",
+        "url": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
+        "true_label": 0,
+        "predicted": 0,
+        "phishing_probability": 0.3,
+        "correct": true
+      },
+      {
+        "description": "Legitimate secure banking path",
+        "url": "https://secure.chase.com/web/auth/dashboard",
+        "true_label": 0,
+        "predicted": 0,
+        "phishing_probability": 0.0,
+        "correct": true
+      },
+      {
+        "description": "Homoglyph phishing pattern",
+        "url": "https://paypa1-secure-login.com/verify",
+        "true_label": 1,
+        "predicted": 1,
+        "phishing_probability": 0.62,
+        "correct": true
+      },
+      {
+        "description": "Simple phishing on suspicious TLD",
+        "url": "https://amazon-customer-support.xyz/account/update",
+        "true_label": 1,
+        "predicted": 1,
+        "phishing_probability": 0.69,
+        "correct": true
+      },
+      {
+        "description": "IP-based phishing (TEST-NET)",
+        "url": "http://192.0.2.45/secure/banking",
+        "true_label": 1,
+        "predicted": 1,
+        "phishing_probability": 0.94,
+        "correct": true
+      },
+      {
+        "description": "Subdomain deception pattern",
+        "url": "http://www.google.com.evil-site.ru/login",
+        "true_label": 1,
+        "predicted": 1,
+        "phishing_probability": 0.7,
+        "correct": true
+      },
+      {
+        "description": "URL shortener - ambiguous",
+        "url": "https://bit.ly/3xample",
+        "true_label": 0,
+        "predicted": 0,
+        "phishing_probability": 0.0,
+        "correct": true
+      },
+      {
+        "description": "Multi-subdomain legitimate TLD",
+        "url": "https://sub1.sub2.sub3.sub4.sub5.example.com/path",
+        "true_label": 0,
+        "predicted": 0,
+        "phishing_probability": 0.4,
+        "correct": true
+      },
+      {
+        "description": "URL with credentials segment",
+        "url": "http://user:pass@example.com/secret",
+        "true_label": 0,
+        "predicted": 0,
+        "phishing_probability": 0.03,
+        "correct": true
+      },
+      {
+        "description": "@-symbol phishing",
+        "url": "http://legitimate.com@phishing.tk/steal",
+        "true_label": 1,
+        "predicted": 0,
+        "phishing_probability": 0.14,
+        "correct": false
+      },
+      {
+        "description": "Punycode domain",
+        "url": "https://xn--80ak6aa92e.com",
+        "true_label": 0,
+        "predicted": 0,
+        "phishing_probability": 0.17,
+        "correct": true
+      },
+      {
+        "description": "Very long URL",
+        "url": "http://example.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "true_label": 0,
+        "predicted": 0,
+        "phishing_probability": 0.25,
+        "correct": true
+      },
+      {
+        "description": "Short legitimate URL",
+        "url": "http://test.co.uk/login",
+        "true_label": 0,
+        "predicted": 0,
+        "phishing_probability": 0.05,
+        "correct": true
+      },
+      {
+        "description": "Simple phishing template",
+        "url": "https://microsoft-account-update.tk/signin",
+        "true_label": 1,
+        "predicted": 1,
+        "phishing_probability": 1.0,
+        "correct": true
+      },
+      {
+        "description": "Simple legitimate Apple URL",
+        "url": "https://www.apple.com/shop/buy-iphone",
+        "true_label": 0,
+        "predicted": 0,
+        "phishing_probability": 0.0,
+        "correct": true
+      }
+    ]
+  },
+  "top5_features": [
+    "count_dots",
+    "count_hyphens",
+    "num_subdomains",
+    "hostname_length",
+    "has_suspicious_keyword"
+  ],
+  "perfect_performance_decision": "SUSPICIOUS"
+}
