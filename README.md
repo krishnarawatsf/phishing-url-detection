@@ -10,7 +10,7 @@
 Phishing Detection & Risk Analysis
 ```
 
-# 🎣 PDRA — Phishing URL Detection & Risk Analysis
+#  PDRA — Phishing URL Detection & Risk Analysis
 
 > *"Not every link is what it seems. PDRA sees through the deception."*
 
@@ -25,7 +25,7 @@ Phishing Detection & Risk Analysis
 
 ---
 
-## 🧠 What is PDRA?
+## What is PDRA?
 
 **PDRA** is a lightweight, explainable phishing URL detection system powered by a **Random Forest classifier** and a custom **risk scoring engine**. It analyzes URLs in real-time using **16 structural and lexical features** — no external APIs, no heavyweight dependencies, no black box.
 
@@ -48,23 +48,23 @@ https://paypa1-secure-login.account-verify.xyz/billing/confirm?token=xX99
 
 | Feature | Description |
 |---|---|
-| 🔍 **16-Feature Extraction** | URL length, hostname structure, IP detection, HTTPS, hyphens, subdomains & more |
-| 🌲 **Random Forest Model** | Trained on a synthetic benchmark; generalizable, fast, interpretable |
-| 🎯 **0–100 Risk Scoring** | Raw probability → human-readable risk score with 4 tiers |
-| 💬 **Plain-English Explanations** | Every prediction comes with *why* it flagged the URL |
-| 📊 **Scan History Dashboard** | SQLite-backed scan log with aggregate stats via REST API |
-| 🌐 **Browser Dashboard** | Vanilla HTML/CSS/JS frontend — no framework bloat |
-| 🔒 **Security-Hardened API** | Input validation, size limits, error isolation |
-| 🧪 **13 Test Modules** | Full coverage: unit, integration, Flask, OWASP, E2E |
+| **16-Feature Extraction** | URL length, hostname structure, IP detection, HTTPS, hyphens, subdomains & more |
+| **Random Forest Model** | Trained on a synthetic benchmark; generalizable, fast, interpretable |
+| **0–100 Risk Scoring** | Raw probability → human-readable risk score with 4 tiers |
+| **Plain-English Explanations** | Every prediction comes with *why* it flagged the URL |
+| **Scan History Dashboard** | SQLite-backed scan log with aggregate stats via REST API |
+| **Browser Dashboard** | Vanilla HTML/CSS/JS frontend — no framework bloat |
+| **Security-Hardened API** | Input validation, size limits, error isolation |
+| **13 Test Modules** | Full coverage: unit, integration, Flask, OWASP, E2E |
 
 ---
 
-## 🎨 Risk Level Scale
+##  Risk Level Scale
 
 ```
  0 ──────────── 30 ──────────── 60 ──────────── 85 ─────── 100
  │                │               │               │          │
- │    ✅ SAFE     │  ⚠ SUSPICIOUS │  🔶 HIGH RISK │ 🔴 CRIT  │
+ │     SAFE     │  ⚠ SUSPICIOUS │  🔶 HIGH RISK │ 🔴 CRIT  │
  │   (Legitimate) │  (Borderline) │  (Likely Bad) │(Phishing)│
 ```
 
@@ -189,7 +189,7 @@ curl -X POST http://127.0.0.1:5000/api/scan \
 ```
 
 <details>
-<summary>📦 Example Response</summary>
+<summary> Example Response</summary>
 
 ```json
 {
